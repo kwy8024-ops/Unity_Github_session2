@@ -63,14 +63,11 @@ jobs:
             MENTIONS=""
             for login in $(echo "$REVIEWERS_JSON" | jq -r '.[] | .login'); do
               case "$login" in
-                "[깃허브 ID_1]")
-                  MENTIONS="$MENTIONS <@[디스코드 ID_1]>"
+                "kwy8024-ops")
+                  MENTIONS="$MENTIONS <@1442334284156375050>"
                   ;;
                 "[깃허브 ID_2]")
-                  MENTIONS="$MENTIONS <@[디스코드 ID_2]>"
-                  ;;
-                "[깃허브 ID_3]")
-                  MENTIONS="$MENTIONS <@[디스코드 ID_3]>"
+                  MENTIONS="$MENTIONS <@1490529327098363985>"
                   ;;
                 *)
                   MENTIONS="$MENTIONS @$login"
@@ -81,9 +78,8 @@ jobs:
             # 만약 요청된 리뷰어가 없으면 현재 리뷰어로 대체
             if [ -z "$MENTIONS" ]; then
               case "$CURRENT_REVIEWER" in
-                "[깃허브 ID_1]") MENTIONS="<@[디스코드 ID_1]>" ;;
-                "[깃허브 ID_2]") MENTIONS="<@[디스코드 ID_2]>" ;;
-                "[깃허브 ID_3]") MENTIONS="<@[디스코드 ID_3]>" ;;
+                "kwy8024-ops") MENTIONS="<@1442334284156375050>" ;;
+                "[깃허브 ID_2]") MENTIONS="<@1490529327098363985>" ;;
                 *) MENTIONS="@$CURRENT_REVIEWER" ;;
               esac
             fi
@@ -159,14 +155,11 @@ jobs:
         run: |
           # PR 작성자 Discord ID 매핑
           case "${{ github.event.pull_request.user.login }}" in
-            "[깃허브 ID_1]")
-              AUTHOR_MENTION="<@[디스코드 ID_1]>"
+            "kwy8024-ops")
+              AUTHOR_MENTION="<@1442334284156375050>"
               ;;
             "[깃허브 ID_2]")
-              AUTHOR_MENTION="<@[디스코드 ID_2]>"
-              ;;
-            "[깃허브 ID_3]")
-              AUTHOR_MENTION="<@[디스코드 ID_3]>"
+              AUTHOR_MENTION="<@1490529327098363985>"
               ;;
             *)
               AUTHOR_MENTION="@${{ github.event.pull_request.user.login }}"
@@ -206,14 +199,11 @@ jobs:
         run: |
           # PR 작성자 Discord ID 매핑
           case "${{ github.event.pull_request.user.login }}" in
-            "[깃허브 ID_1]")
-              AUTHOR_MENTION="<@[디스코드 ID_1]>"
+            "kwy8024-ops")
+              AUTHOR_MENTION="<@1442334284156375050>"
               ;;
             "[깃허브 ID_2]")
-              AUTHOR_MENTION="<@[디스코드 ID_2]>"
-              ;;
-            "[깃허브 ID_3]")
-              AUTHOR_MENTION="<@[디스코드 ID_3]>"
+              AUTHOR_MENTION="<@1490529327098363985>"
               ;;
             *)
               AUTHOR_MENTION="@${{ github.event.pull_request.user.login }}"

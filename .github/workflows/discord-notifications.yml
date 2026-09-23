@@ -66,7 +66,7 @@ jobs:
                 "kwy8024-ops")
                   MENTIONS="$MENTIONS <@1442334284156375050>"
                   ;;
-                "[깃허브 ID_2]")
+                "3303twg-droid")
                   MENTIONS="$MENTIONS <@1490529327098363985>"
                   ;;
                 *)
@@ -79,7 +79,7 @@ jobs:
             if [ -z "$MENTIONS" ]; then
               case "$CURRENT_REVIEWER" in
                 "kwy8024-ops") MENTIONS="<@1442334284156375050>" ;;
-                "[깃허브 ID_2]") MENTIONS="<@1490529327098363985>" ;;
+                "3303twg-droid") MENTIONS="<@1490529327098363985>" ;;
                 *) MENTIONS="@$CURRENT_REVIEWER" ;;
               esac
             fi
@@ -158,7 +158,7 @@ jobs:
             "kwy8024-ops")
               AUTHOR_MENTION="<@1442334284156375050>"
               ;;
-            "[깃허브 ID_2]")
+            "3303twg-droid")
               AUTHOR_MENTION="<@1490529327098363985>"
               ;;
             *)
@@ -202,7 +202,7 @@ jobs:
             "kwy8024-ops")
               AUTHOR_MENTION="<@1442334284156375050>"
               ;;
-            "[깃허브 ID_2]")
+            "3303twg-droid")
               AUTHOR_MENTION="<@1490529327098363985>"
               ;;
             *)
